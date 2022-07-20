@@ -1,0 +1,42 @@
+/* fonts */
+@import url('https://fonts.googleapis.com/css2?family=Cabin:wght@500&display=swap');
+
+/* common styles */
+body{
+  font-family: 'Cabin', sans-serif;
+}
+/* -------------------------
+       top banner style
+    --------------------------*/
+h1{
+  font-size: 70px;
+}
+
+.container{
+  display: flex;
+  width: 1321px;
+  height: 380px;
+  padding: 50px 20px;
+  color: #FFFFFF;
+  background-color: #161616;
+  margin-bottom: 100px;
+  border-radius: 30px;
+}
+.link-button{
+  text-decoration: none;
+  width: 120px;
+  background-color: #DD0000;
+  padding: 10px 10px;
+  color: white;
+  font-weight: 187px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.top-banner{
+  width: 50%;
+  padding-left: 5%;
+}
+
+
+
+
