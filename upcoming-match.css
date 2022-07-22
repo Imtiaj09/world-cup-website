@@ -13,15 +13,19 @@ h1{
 }
 
 .container{
-  display: flex;
-  width: 1321px;
-  height: 380px;
+  display: grid;
+  grid-template-columns: repeat(2,fr);
+  min-height: 60vh;
   padding: 50px 20px;
   color: #FFFFFF;
   background-color: #161616;
   margin-bottom: 100px;
   border-radius: 30px;
 }
+.container .top-banner img {
+  width: 100%;
+}
+
 .link-button{
   text-decoration: none;
   width: 120px;
@@ -32,10 +36,6 @@ h1{
   border-radius: 5px;
   cursor: pointer;
 }
-.top-banner{
-  width: 50%;
-  padding-left: 5%;
-}
 
 /* ----------------------
     match-section style
@@ -43,6 +43,7 @@ h1{
 .players-container{
   display: grid;
   grid-template-columns: repeat(2, 0.20fr);
+  column-gap: 20px;
 }
 .responsive-link-button{
   display: flex;
@@ -72,19 +73,17 @@ h1{
   color: #FFFFFF;
 }
 .match-list{
+  border-radius: 5px solid black;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  column-gap: 20px;
+  row-gap: 20px;
 }
-
 .match-section{
-width: 312px;
-height: 242px;
-margin-left: 30px;
 border: 1px solid black;
-margin-bottom: 30px;
+padding: 10px;
 border-radius: 5px;
 }
-
 
 .match-1{
   padding-top: 30px;
@@ -148,3 +147,73 @@ hr{
   margin-left: 10px;
   margin-bottom: 10px;
 }
+
+
+/* ---------------------------
+   for upcomig page tablet view
+ ---------------------------- */
+
+@media screen and (min-width:689px) and (max-width: 992px) {
+  .match-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .players-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .responsive-link-button {
+    background-color: white;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    left: 200px;
+  }
+  .info-button{
+    border: 1px solid black;
+    margin-left: 5px;
+  }
+}
+
+/* ----------------------------
+  for upcoming page mobile view
+  ------------------------------ */
+@media screen and (max-width: 688px) {
+  .match-list {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .players-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .responsive-link-button {
+    background-color: white;
+  }
+  .info-button{
+    border: 1px solid black;
+  } 
+}
+@media screen and (max-width: 688px) {
+  .container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+@media screen and (max-width: 688px){
+  .players-container{
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .footer-list{
+    display: flex;
+    flex-direction: column;
+    
+  }
+  .footer-icon{
+    margin-top: 10px;
+  }
+}
+

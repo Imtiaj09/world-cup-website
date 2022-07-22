@@ -2,27 +2,34 @@
 @import url('https://fonts.googleapis.com/css2?family=Cabin:wght@500&display=swap');
 
 /* common styles */
-body{
+body {
   font-family: 'Cabin', sans-serif;
 }
+
 /* -------------------------
        top banner style
     --------------------------*/
-h1{
-  font-size: 70px;
+h1 {
+  font-size: 3vw;
 }
 
-.container{
-  display: flex;
-  width: 1321px;
-  height: 380px;
+.container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  min-height: 60vh;
   padding: 50px 20px;
   color: #FFFFFF;
   background-color: #161616;
   margin-bottom: 100px;
   border-radius: 30px;
 }
-.link-button{
+
+.container .top-banner img {
+  width: 100%;
+}
+
+
+.link-button {
   text-decoration: none;
   width: 120px;
   background-color: #DD0000;
@@ -32,87 +39,79 @@ h1{
   border-radius: 5px;
   cursor: pointer;
 }
-.top-banner{
-  width: 50%;
-  padding-left: 5%;
-}
 
 /* ----------------------
     match-section style
    -------------------- */
-.players-container{
+.players-container {
   display: grid;
-  grid-template-columns: repeat(2, 0.20fr);
+  grid-template-columns: 250px repeat(1, 1fr);
+  column-gap: 20px;
 }
-.responsive-link-button{
+
+.responsive-link-button {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 250px;
-  height: 250px;
+  max-height: 250px;
   border: 2px;
   background-color: black;
   border-radius: 5px;
 }
-.info-button{
+
+.info-button {
   display: flex;
   text-decoration: none;
   width: 120px;
-  background-color:white;
+  background-color: white;
   padding: 10px 10px;
   margin-bottom: 40px;
-  color:black;
+  color: black;
   font-weight: 187px;
   border-radius: 5px;
   margin-top: 3px;
 }
-.info-button:hover{
+
+.info-button:hover {
   background-color: #DD0000;
   color: #FFFFFF;
 }
-.match-section{
+
+.match-section {
   border-radius: 5px solid black;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  position: relative;
-  left: 15%;
+  column-gap: 20px;
+  row-gap: 20px;
 }
-.match-banner{
-  width: 250px;
-  height: 300px;
+.match-banner {
   border: 1px solid gray;
-  position: relative;
-  left: 50px;
   padding: 10px;
-  margin: 10px;
   border-radius: 10px;
 }
-.transfer-button{
+
+.transfer-button {
   text-decoration: none;
   border: 2px solid black;
   margin: 5px;
   border-radius: 3px;
 }
-.match-banner .info-button .match-banner {
-  display: inline-block;
-  margin-left: 50px;
-}
 
-.match-section .match-banner img{
-  max-width: 100%;
+.match-section .match-banner img {
+  width: 100%;
 }
 
 
 
-.icon-container{
-    display: flex;
-    justify-content: space-evenly;
-    margin-left: -70px;
-  
+.icon-container {
+  display: flex;
+  justify-content: space-evenly;
+  margin-left: -70px;
+
 }
 
-.fa-regular{
+.fa-regular {
   margin-right: 10px;
 }
 
@@ -120,11 +119,12 @@ h1{
     footer section 
     --------------*/
 
-footer{
-  background-color: #161616;;
+footer {
+  background-color: #161616;
+  ;
 }
- 
-#footer-title{
+
+#footer-title {
   text-align: center;
   font-weight: 600;
   font-size: 40px;
@@ -132,33 +132,106 @@ footer{
   padding-top: 60px;
 }
 
-.for-hr{
+.for-hr {
   padding: 80px 100px 50px 100px;
 }
 
-hr{
+hr {
   border: 1px solid rgba(255, 255, 255, 0.1);
-  
-} 
 
-.footer-list{
-  text-align: center;
-  padding-bottom: 50px;
-  
 }
 
- .footer-icon{
+.footer-list {
+  text-align: center;
+  padding-bottom: 50px;
+
+}
+
+.footer-icon {
   list-style: none;
   text-decoration: none;
   margin-left: 15px;
   color: white;
 }
-.social-link{
+
+.social-link {
   text-align: center;
-  
+
 }
-.social-icon{
+
+.social-icon {
   color: #FFFFFF;
   margin-left: 10px;
   margin-bottom: 10px;
+}
+
+
+
+/* --------------------
+  For tablet view section
+  ----------------------- */
+@media screen and (min-width:689px) and (max-width: 992px) {
+  .match-section {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .players-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .responsive-link-button {
+    background-color: white;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  .info-button{
+    border: 1px solid black;
+    margin-left: 5px;
+  }
+}
+
+/* ---------------------
+   For Mobile View Section
+  ---------------------- */
+@media screen and (max-width: 688px) {
+  .match-section {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .players-container {
+    display: flex;
+    flex-direction: column;
+  }
+  .responsive-link-button {
+    background-color: white;
+  }
+  .info-button{
+    border: 1px solid black;
+  }  
+}
+
+
+
+@media screen and (max-width: 688px) {
+  .container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+
+@media screen and (max-width: 688px) {
+  .match-section {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .players-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .responsive-link-button {
+    background-color: white;
+  }
 }
