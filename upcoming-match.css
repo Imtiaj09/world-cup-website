@@ -71,49 +71,34 @@ h1{
   background-color: #DD0000;
   color: #FFFFFF;
 }
-.match-section{
-  border-radius: 5px solid black;
+.match-list{
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  position: relative;
-  left: 15%;
-}
-.match-banner{
-  width: 250px;
-  height: 300px;
-  border: 1px solid gray;
-  position: relative;
-  left: 50px;
-  padding: 10px;
-  margin: 10px;
-  border-radius: 10px;
-}
-.transfer-button{
-  text-decoration: none;
-  border: 2px solid black;
-  margin: 5px;
-  border-radius: 3px;
-}
-.match-banner .info-button .match-banner {
-  display: inline-block;
-  margin-left: 50px;
 }
 
-.match-section .match-banner img{
-  max-width: 100%;
+.match-section{
+width: 312px;
+height: 242px;
+margin-left: 30px;
+border: 1px solid black;
+margin-bottom: 30px;
+border-radius: 5px;
 }
 
 
-
-.icon-container{
-    display: flex;
-    justify-content: space-evenly;
-    margin-left: -70px;
-  
+.match-1{
+  padding-top: 30px;
+  display: flex;
+  justify-content: center;
 }
-
-.fa-regular{
+.vs{
+  margin-left: 10px;
   margin-right: 10px;
+  font-size: 20px;
+}
+
+.match-2{
+  padding-left: 50px;
 }
 
 /* ---------------
@@ -157,6 +142,7 @@ hr{
   text-align: center;
   
 }
+
 .social-icon{
   color: #FFFFFF;
   margin-left: 10px;
